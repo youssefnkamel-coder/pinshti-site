@@ -164,6 +164,13 @@ footer b{color:var(--gold-hi)}
 @media (max-width:720px){ .progs{grid-template-columns:1fr} }
 .prog .pmore{aspect-ratio:16/10;overflow:hidden}
 .prog .pmore img{width:100%;height:100%;object-fit:cover;display:block}
+.prog .pa button.alt{background:rgba(90,15,36,.08);color:var(--wine);border:1.5px solid var(--line)}
+.pvids{grid-column:1/-1;background:#fff;border:1.5px solid var(--gold);border-radius:22px;padding:18px;box-shadow:0 8px 22px rgba(90,15,36,.08)}
+.pvids[hidden]{display:none}
+.pvh{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 14px;margin:0 4px 14px}
+.pvh b{font-size:1.15rem;font-weight:900;color:var(--wine)}
+.pvh span{color:var(--muted);font-weight:600;font-size:.9rem}
+.pvids .vid{box-shadow:none}
 .subhead{text-align:center;margin:0 0 16px;font-size:clamp(1.2rem,2.6vw,1.5rem);font-weight:900;color:var(--wine)}
 .vmodal .vbox.land{width:min(960px,100%)}
 .vmodal .vbox.land video{aspect-ratio:16/9}
@@ -299,14 +306,10 @@ footer b{color:var(--gold-hi)}
       <div class="prog reveal"><button class="pv" type="button" data-v="payroll"><img src="videos/payroll/cover.jpg" alt="أيقونة نظام المرتبات" loading="lazy"><span class="play"><svg><use href="#i-play"/></svg></span></button>
         <div class="pb"><h3>نظام المرتبات</h3><p>إدارة مرتبات مؤسستك بسهولة ودقة: بيانات العاملين، والحساب التلقائي، والتقارير والطباعة.</p><div class="pa"><button type="button" data-v="payroll">شاهد الفيديو</button></div></div></div>
       <div class="prog reveal"><button class="pv" type="button" data-v="overview"><img src="videos/bookstore/cover.jpg" alt="أيقونة برنامج إدارة المكتبة" loading="lazy"><span class="play"><svg><use href="#i-play"/></svg></span></button>
-        <div class="pb"><h3>برنامج إدارة المكتبة</h3><p>بيع بالباركود، ومخزون، وموردون ومصروفات، وتقفيل خزينة، وتقارير.</p><div class="pa"><button type="button" data-v="overview">شاهد الفيديو</button><a class="alt" href="#videos">فيديوهات الشرح (8)</a></div></div></div>
-      <div class="prog reveal"><button class="pv" type="button" data-v="academy"><img src="videos/academy/cover.jpg" alt="أيقونة المنصة التعليمية" loading="lazy"><span class="play"><svg><use href="#i-play"/></svg></span></button>
-        <div class="pb"><h3>منصة تعليمية للمدرسين</h3><p>محاضرات بأكواد، وكويزات بتصحيح تلقائي، ودرجات بتوصل لولي الأمر على واتساب.</p><div class="pa"><button type="button" data-v="academy">شاهد الفيديو</button></div></div></div>
-      <div class="prog reveal more"><div class="pmore"><img src="videos/more-cover.jpg" alt="" loading="lazy"></div>
-        <div class="pb"><h3>وبرامج خدمية متنوعة أخرى</h3><p>عندك نشاط مختلف؟ بنصمّم لك برنامج على مقاس شغلك: حجز، ومتابعة، وكاشير، وإدارة عملاء، وأكتر.</p><div class="pa"><a href="https://wa.me/201206020017" target="_blank" rel="noopener">كلّمنا عن فكرتك</a></div></div></div>
-    </div>
-    <h3 class="subhead reveal" id="videos">فيديوهات شرح برنامج المكتبة</h3>
-    <div class="vids">
+        <div class="pb"><h3>برنامج إدارة المكتبة</h3><p>بيع بالباركود، ومخزون، وموردون ومصروفات، وتقفيل خزينة، وتقارير.</p><div class="pa"><button type="button" data-v="overview">شاهد الفيديو</button><button type="button" class="alt" id="vtoggle" aria-expanded="false" aria-controls="videos">فيديوهات الشرح (8) ▾</button></div></div></div>
+      <div class="pvids" id="videos" hidden>
+        <div class="pvh"><b>فيديوهات شرح برنامج المكتبة</b><span>اضغط على أي فيديو، وتقدر تبدّل بين العربي والإنجليزي</span></div>
+        <div class="vids">
       <button class="vid reveal" type="button" data-v="overview"><div class="th"><img src="videos/bookstore/ar-overview.jpg" alt="" loading="lazy"><span class="play"><svg><use href="#i-play"/></svg></span><span class="dur">0:51</span></div><h3>تعرّف على برنامج إدارة المكتبة</h3></button>
       <button class="vid reveal" type="button" data-v="login"><div class="th"><img src="videos/bookstore/ar-login.jpg" alt="" loading="lazy"><span class="play"><svg><use href="#i-play"/></svg></span><span class="dur">0:35</span></div><h3>تسجيل الدخول والصلاحيات</h3></button>
       <button class="vid reveal" type="button" data-v="sale"><div class="th"><img src="videos/bookstore/ar-sale.jpg" alt="" loading="lazy"><span class="play"><svg><use href="#i-play"/></svg></span><span class="dur">0:43</span></div><h3>البيع بالباركود وطباعة الإيصال</h3></button>
@@ -315,6 +318,12 @@ footer b{color:var(--gold-hi)}
       <button class="vid reveal" type="button" data-v="suppliers"><div class="th"><img src="videos/bookstore/ar-suppliers.jpg" alt="" loading="lazy"><span class="play"><svg><use href="#i-play"/></svg></span><span class="dur">0:36</span></div><h3>الموردون والمصروفات</h3></button>
       <button class="vid reveal" type="button" data-v="cashclose"><div class="th"><img src="videos/bookstore/ar-cashclose.jpg" alt="" loading="lazy"><span class="play"><svg><use href="#i-play"/></svg></span><span class="dur">0:36</span></div><h3>تقفيل الخزينة اليومي</h3></button>
       <button class="vid reveal" type="button" data-v="reports"><div class="th"><img src="videos/bookstore/ar-reports.jpg" alt="" loading="lazy"><span class="play"><svg><use href="#i-play"/></svg></span><span class="dur">0:34</span></div><h3>التقارير ولوحة التحكم</h3></button>
+        </div>
+      </div>
+      <div class="prog reveal"><button class="pv" type="button" data-v="academy"><img src="videos/academy/cover.jpg" alt="أيقونة المنصة التعليمية" loading="lazy"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+        <div class="pb"><h3>منصة تعليمية للمدرسين</h3><p>محاضرات بأكواد، وكويزات بتصحيح تلقائي، ودرجات بتوصل لولي الأمر على واتساب.</p><div class="pa"><button type="button" data-v="academy">شاهد الفيديو</button></div></div></div>
+      <div class="prog reveal more"><div class="pmore"><img src="videos/more-cover.jpg" alt="" loading="lazy"></div>
+        <div class="pb"><h3>وبرامج خدمية متنوعة أخرى</h3><p>عندك نشاط مختلف؟ بنصمّم لك برنامج على مقاس شغلك: حجز، ومتابعة، وكاشير، وإدارة عملاء، وأكتر.</p><div class="pa"><a href="https://wa.me/201206020017" target="_blank" rel="noopener">كلّمنا عن فكرتك</a></div></div></div>
     </div>
   </div>
 </section>
@@ -368,6 +377,10 @@ function vLoad(){
 function vClose(){ vm.classList.remove('open'); vp.pause(); vp.removeAttribute('src'); vp.load(); document.body.style.overflow = ''; }
 document.querySelectorAll('[data-v]').forEach(b => b.addEventListener('click', () => { vCur = b.dataset.v; vm.classList.add('open'); document.body.style.overflow = 'hidden'; vLoad(); }));
 vm.querySelectorAll('.vlang button').forEach(b => b.addEventListener('click', () => { if (vLang !== b.dataset.l){ vLang = b.dataset.l; vLoad(); } }));
+const vtg=document.getElementById('vtoggle'), vpan=document.getElementById('videos');
+function vShow(open){ vpan.hidden=!open; vtg.setAttribute('aria-expanded',open); vtg.textContent='فيديوهات الشرح (8) '+(open?'▴':'▾'); if(open){ vpan.querySelectorAll('.reveal').forEach(e=>e.classList.add('on')); vpan.scrollIntoView({behavior:'smooth',block:'start'}); } }
+vtg.addEventListener('click',()=>vShow(vpan.hidden));
+if(location.hash==='#videos') vShow(true);
 vm.querySelector('.vclose').addEventListener('click', vClose);
 vm.addEventListener('click', e => { if (e.target === vm) vClose(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && vm.classList.contains('open')) vClose(); });

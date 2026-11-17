@@ -153,7 +153,7 @@ footer b{color:var(--gold-hi)}
 .prog .pv img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
 .prog .pv:hover img{transform:scale(1.04)}
 .prog .pv:focus-visible{outline:3px solid var(--gold);outline-offset:-3px}
-.prog .pv .play{position:absolute;inset:0;margin:auto;width:58px;height:58px;border-radius:50%;background:var(--gold-grad);display:grid;place-items:center;box-shadow:0 8px 20px rgba(0,0,0,.35)}
+.prog .pv .play{position:absolute;bottom:12px;right:12px;width:50px;height:50px;border-radius:50%;background:var(--gold-grad);display:grid;place-items:center;box-shadow:0 8px 20px rgba(0,0,0,.35)}
 .prog .pv .play svg{width:24px;height:24px;color:var(--wine-3);margin-inline-start:-3px}
 .prog .pb{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
 .prog h3{margin:0;font-size:1.15rem;font-weight:900;color:var(--wine)}
@@ -162,8 +162,8 @@ footer b{color:var(--gold-hi)}
 .prog .pa a,.prog .pa button{all:unset;cursor:pointer;font-weight:800;font-size:.9rem;padding:6px 14px;border-radius:999px;background:var(--gold-grad);color:var(--wine-3)}
 .prog .pa a.alt{background:rgba(90,15,36,.08);color:var(--wine);border:1.5px solid var(--line)}
 @media (max-width:720px){ .progs{grid-template-columns:1fr} }
-.prog .pmore{aspect-ratio:16/10;display:grid;place-items:center;background:linear-gradient(160deg,var(--wine-2),var(--wine-3))}
-.prog .pmore svg{width:84px;height:84px;color:var(--gold-hi)}
+.prog .pmore{aspect-ratio:16/10;overflow:hidden}
+.prog .pmore img{width:100%;height:100%;object-fit:cover;display:block}
 .subhead{text-align:center;margin:0 0 16px;font-size:clamp(1.2rem,2.6vw,1.5rem);font-weight:900;color:var(--wine)}
 .vmodal .vbox.land{width:min(960px,100%)}
 .vmodal .vbox.land video{aspect-ratio:16/9}
@@ -296,13 +296,13 @@ footer b{color:var(--gold-hi)}
   <div class="wrap">
     <div class="head reveal"><h2>برامجنا</h2><p>اتفرّج على كل برنامج وهو شغّال</p><div class="bar"></div></div>
     <div class="progs">
-      <div class="prog reveal"><button class="pv" type="button" data-v="payroll"><img src="videos/payroll/ar-intro.jpg" alt="" loading="lazy"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+      <div class="prog reveal"><button class="pv" type="button" data-v="payroll"><img src="videos/payroll/cover.jpg" alt="أيقونة نظام المرتبات" loading="lazy"><span class="play"><svg><use href="#i-play"/></svg></span></button>
         <div class="pb"><h3>نظام المرتبات</h3><p>إدارة مرتبات مؤسستك بسهولة ودقة: بيانات العاملين، والحساب التلقائي، والتقارير والطباعة.</p><div class="pa"><button type="button" data-v="payroll">شاهد الفيديو</button></div></div></div>
-      <div class="prog reveal"><button class="pv" type="button" data-v="overview"><img src="videos/bookstore/ar-overview.jpg" alt="" loading="lazy" style="object-position:center 20%"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+      <div class="prog reveal"><button class="pv" type="button" data-v="overview"><img src="videos/bookstore/cover.jpg" alt="أيقونة برنامج إدارة المكتبة" loading="lazy"><span class="play"><svg><use href="#i-play"/></svg></span></button>
         <div class="pb"><h3>برنامج إدارة المكتبة</h3><p>بيع بالباركود، ومخزون، وموردون ومصروفات، وتقفيل خزينة، وتقارير.</p><div class="pa"><button type="button" data-v="overview">شاهد الفيديو</button><a class="alt" href="#videos">فيديوهات الشرح (8)</a></div></div></div>
-      <div class="prog reveal"><button class="pv" type="button" data-v="academy"><img src="videos/academy/ar-full.jpg" alt="" loading="lazy" style="object-position:center 20%"><span class="play"><svg><use href="#i-play"/></svg></span></button>
+      <div class="prog reveal"><button class="pv" type="button" data-v="academy"><img src="videos/academy/cover.jpg" alt="أيقونة المنصة التعليمية" loading="lazy"><span class="play"><svg><use href="#i-play"/></svg></span></button>
         <div class="pb"><h3>منصة تعليمية للمدرسين</h3><p>محاضرات بأكواد، وكويزات بتصحيح تلقائي، ودرجات بتوصل لولي الأمر على واتساب.</p><div class="pa"><button type="button" data-v="academy">شاهد الفيديو</button></div></div></div>
-      <div class="prog reveal more"><div class="pmore"><svg><use href="#i-gear"/></svg></div>
+      <div class="prog reveal more"><div class="pmore"><img src="videos/more-cover.jpg" alt="" loading="lazy"></div>
         <div class="pb"><h3>وبرامج خدمية متنوعة أخرى</h3><p>عندك نشاط مختلف؟ بنصمّم لك برنامج على مقاس شغلك: حجز، ومتابعة، وكاشير، وإدارة عملاء، وأكتر.</p><div class="pa"><a href="https://wa.me/201206020017" target="_blank" rel="noopener">كلّمنا عن فكرتك</a></div></div></div>
     </div>
     <h3 class="subhead reveal" id="videos">فيديوهات شرح برنامج المكتبة</h3>
